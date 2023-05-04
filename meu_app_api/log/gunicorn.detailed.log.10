@@ -1,0 +1,89 @@
+[2023-05-03 11:53:19,652] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.55:5000 (Press CTRL+C to quit) - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:53:19,658] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:53:28,853] ERROR log_exception() L1449 Exception on /pessoa [PUT] - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_openapi3\scaffold.py", line 273, in wrapper
+    resp = _do_wrapper(
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\app.py", line 171, in atualizar_pessoa
+    count = session.query(PessoaModel).filter(PessoaModel.cpf_cnpj == cpf_cnpj).update(**dados)
+TypeError: Query.update() got an unexpected keyword argument 'nome'
+[2023-05-03 11:53:28,861] INFO _log() L224  127.0.0.1 - - [03/May/2023 11:53:28] "[35m[1mPUT /pessoa HTTP/1.1[0m" 500 - - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:55:08,665] INFO _log() L224   * Detected change in 'D:\\Estudos\\MVP\\ulisses_canal\\meu_app_api\\app.py', reloading - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:55:08,753] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:55:16,252] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.55:5000 (Press CTRL+C to quit) - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:55:16,255] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:55:26,282] ERROR log_exception() L1449 Exception on /pessoa [PUT] - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_openapi3\scaffold.py", line 273, in wrapper
+    resp = _do_wrapper(
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\app.py", line 170, in atualizar_pessoa
+    count = session.query(PessoaModel).filter(PessoaModel.cpf_cnpj == cpf_cnpj).update(nome=nome,tipo_pessoa=tipo_pessoa,cpf_cnpj=cpf_cnpj,estado_civil=estado_civil,endereco=endereco,telefone=telefone,email=email)
+TypeError: Query.update() got an unexpected keyword argument 'nome'
+[2023-05-03 11:55:26,287] INFO _log() L224  127.0.0.1 - - [03/May/2023 11:55:26] "[35m[1mPUT /pessoa HTTP/1.1[0m" 500 - - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:58:35,488] INFO _log() L224   * Detected change in 'D:\\Estudos\\MVP\\ulisses_canal\\meu_app_api\\app.py', reloading - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:58:35,578] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:58:55,775] INFO _log() L224   * Detected change in 'D:\\Estudos\\MVP\\ulisses_canal\\meu_app_api\\app.py', reloading - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:58:55,863] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:59:00,353] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.55:5000 (Press CTRL+C to quit) - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:59:00,356] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:59:08,460] INFO _log() L224   * Detected change in 'D:\\Estudos\\MVP\\ulisses_canal\\meu_app_api\\app.py', reloading - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:59:08,546] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 11:59:15,762] ERROR log_exception() L1449 Exception on /pessoa [PUT] - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_openapi3\scaffold.py", line 273, in wrapper
+    resp = _do_wrapper(
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "D:\Estudos\MVP\ulisses_canal\meu_app_api\app.py", line 170, in atualizar_pessoa
+    session.query(PessoaModel).filter(PessoaModel.cpf_cnpj == cpf_cnpj).update(**dados)
+TypeError: Query.update() got an unexpected keyword argument 'nome'
+[2023-05-03 11:59:15,768] INFO _log() L224  127.0.0.1 - - [03/May/2023 11:59:15] "[35m[1mPUT /pessoa HTTP/1.1[0m" 500 - - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 12:03:43,365] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.55:5000 (Press CTRL+C to quit) - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 12:03:43,368] INFO _log() L224   * Restarting with stat - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
+[2023-05-03 12:03:53,335] INFO _log() L224  127.0.0.1 - - [03/May/2023 12:03:53] "PUT /pessoa HTTP/1.1" 200 - - call_trace=D:\Estudos\MVP\ulisses_canal\meu_app_api\.venv\lib\site-packages\werkzeug\_internal.py L224 
